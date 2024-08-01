@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom'; 
 import Signup from './Signup'; 
 import './index.css';
+import PatientDashboard from './PatientDashboard';
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
       
       {/* Define the route for the signup page */}
       <Route path="/register" element={<Signup />} /> 
+      <Route path="/dashboard" element={<PatientDashboard />} /> 
     </Routes>
   );
 };
