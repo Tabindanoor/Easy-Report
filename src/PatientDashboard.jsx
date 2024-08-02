@@ -37,17 +37,27 @@ const Patientdasboard = () => {
 
   const SearchDoctor = () => {
     return (
-      <div className="search-doctor">
-      <h2>Search for a Doctor</h2>
+    //   <div className="search-doctor">
+    //   <h2>Search for a Doctor</h2>
         
-        <div className='my-search' style={{margin:"auto 0 ",  justifySelf:"center",justifyContent:"center"}}>
-        <input type="text" placeholder="Search..." className="search-input" />
+    //     <div className='my-search' style={{margin:"auto 0 ",  justifySelf:"center",justifyContent:"center"}}>
+          
+    //     <input type="text" placeholder="Search..." className="search-input" />
        
-       <button className="search-btn" >  <FaSearch className="search-icon"   /> Search  </button>
+    //    <button className="search-btn" >  <FaSearch className="search-icon"   /> Search  </button>
 
-        </div>
-       
+    //     </div>
+    // </div>
+    <div className="search-doctor">
+    <h2>Search for a Doctor</h2>
+    <div className='my-search' style={{margin:"auto 0", justifySelf:"center", justifyContent:"center"}}>
+      <div className="input-container">
+        <FaSearch className="search-icon" />
+        <input type="text" placeholder="Search..." className="search-input" />
+      </div>
+      <button className="search-btn">Search</button>
     </div>
+  </div>
     );
   };
 
