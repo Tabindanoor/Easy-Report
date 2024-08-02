@@ -3,6 +3,7 @@ import "./PateintDashboard.css"
 import logo from "../public/logo.png"
 import { FaArrowLeft, FaArrowRight, FaBriefcase, FaMapMarkerAlt, FaSearch } from 'react-icons/fa'; 
 import doctorImg from "../public/doctor.jpg"
+import doctorImage from "../public/doctor.png"
 const Patientdasboard = () => {
 
  
@@ -121,29 +122,96 @@ const Patientdasboard = () => {
     };
   
     return (
-      <div className="my-container">
-        <div className="card-container">
-          {currentDoctors.map((doctor) => (
-            <DoctorCard key={doctor.id} doctor={doctor} />
-          ))}
-        </div>
-        <div className="pagination">
-          <button
-            onClick={handlePreviousPage}
-            className="prev-button"
-            disabled={currentPage === 1}
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            onClick={handleNextPage}
-            className="next-button"
-            disabled={indexOfLastDoctor >= doctors.length}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-      </div>
+
+
+      <div className="card__collection">
+        {
+          doctors.map((data)=>(
+
+              <div className="cards cards--three">
+        <img
+          src={doctorImage}
+          className="img-responsive"
+          alt="Cards"
+        />
+        <span className="cards--three__rect-1">
+          <span className="shadow-1"></span>
+          <p>Chris Levnon</p>
+        </span>
+        <span className="cards--three__rect-2">
+          <span className="shadow-2"></span>
+        </span>
+        <span className=""></span>
+        <ul className="cards--three__list">
+          <li><i className="fab fa-facebook-f"></i></li>
+          <li><i className="fab fa-twitter"></i></li>
+          <li><i className="fab fa-linkedin-in"></i></li>
+        </ul>
+      </div> 
+          //   <div className="cards cards--two">
+          //   <img
+          //     src={doctorImage}
+          //     className=""
+          //     style={{width:"100%", height:"100%", backgroundImage:"contain"}}
+          //     alt="Cards"
+          //   />
+          //   <span className="cards--two__rect"></span>
+          //   <span className="cards--two__tri"></span>
+          //   <p>Lucy Grace</p>
+          //   <ul className="cards__list">
+          //     <li><i className="fab fa-facebook-f"></i></li>
+          //     <li><i className="fab fa-twitter"></i></li>
+          //     <li><i className="fab fa-instagram"></i></li>
+          //     <li><i className="fab fa-linkedin-in"></i></li>
+          //   </ul>
+          // </div>
+          ))
+        }
+    
+      {/* <div className="cards cards--three">
+        <img
+          src="https://images.unsplash.com/photo-1480408144303-d874c5e12201?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=575213599ae24b3dbdfd84be79425c50&auto=format&fit=crop&w=634&q=80"
+          className="img-responsive"
+          alt="Cards"
+        />
+        <span className="cards--three__rect-1">
+          <span className="shadow-1"></span>
+          <p>Chris Levnon</p>
+        </span>
+        <span className="cards--three__rect-2">
+          <span className="shadow-2"></span>
+        </span>
+        <span className="cards--three__circle"></span>
+        <ul className="cards--three__list">
+          <li><i className="fab fa-facebook-f"></i></li>
+          <li><i className="fab fa-twitter"></i></li>
+          <li><i className="fab fa-linkedin-in"></i></li>
+        </ul>
+      </div> */}
+    </div>
+      // <div className="my-container">
+      //   <div className="card-container">
+      //     {currentDoctors.map((doctor) => (
+      //       <DoctorCard key={doctor.id} doctor={doctor} />
+      //     ))}
+      //   </div>
+      //   <div className="pagination">
+      //     <button
+      //       onClick={handlePreviousPage}
+      //       className="prev-button"
+      //       disabled={currentPage === 1}
+      //     >
+      //       <FaArrowLeft />
+      //     </button>
+      //     <button
+      //       onClick={handleNextPage}
+      //       className="next-button"
+      //       disabled={indexOfLastDoctor >= doctors.length}
+      //     >
+      //       <FaArrowRight />
+      //     </button>
+      //   </div>
+      // </div>
     );
   };
 
