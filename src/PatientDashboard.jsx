@@ -39,12 +39,14 @@ const Patientdasboard = () => {
     return (
       <div className="search-doctor">
       <h2>Search for a Doctor</h2>
-      <div className="search-container">
         
+        <div className='my-search' style={{margin:"auto 0 ",  justifySelf:"center",justifyContent:"center"}}>
         <input type="text" placeholder="Search..." className="search-input" />
-        <button className="search-btn" style={{width:"200px"}} >  <FaSearch className="search-icon"   /> Search  </button>
        
-      </div>
+       <button className="search-btn" >  <FaSearch className="search-icon"   /> Search  </button>
+
+        </div>
+       
     </div>
     );
   };
@@ -75,58 +77,6 @@ const Patientdasboard = () => {
    
     );
   };
-
-  // const doctors = [
-  //   { id: 1, name: 'Dr. John Doe', occupation: 'Cardiologist', city: 'New York', image: 'doctor1.jpg' },
-  //   { id: 2, name: 'Dr. Jane Smith', occupation: 'Neurologist', city: 'Los Angeles', image: 'doctor2.jpg' },
-  //   { id: 3, name: 'Dr. Mark Johnson', occupation: 'Dermatologist', city: 'Chicago', image: 'doctor3.jpg' },
-  //   { id: 4, name: 'Dr. Lisa Brown', occupation: 'Pediatrician', city: 'Houston', image: 'doctor4.jpg' },
-  //   { id: 5, name: 'Dr. James Davis', occupation: 'Surgeon', city: 'Phoenix', image: 'doctor5.jpg' },
-  //   { id: 6, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
-  //   { id: 7, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
-  //   { id: 8, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
-  // ];
-  
-  // const DoctorList = () => {
-  //   const [currentPage, setCurrentPage] = useState(1);
-  //   const doctorsPerPage = 4;
-  
-  //   const indexOfLastDoctor = currentPage * doctorsPerPage;
-  //   const indexOfFirstDoctor = indexOfLastDoctor - doctorsPerPage;
-  //   const currentDoctors = doctors.slice(indexOfFirstDoctor, indexOfLastDoctor);
-  
-  //   const handleNextPage = () => {
-  //     setCurrentPage((prevPage) => prevPage + 1);
-  //   };
-  
-  //   const handlePrevPage = () => {
-  //     setCurrentPage((prevPage) => prevPage - 1);
-  //   };
-
-  //       return (
-  //         <div className="my-container">
-  //            {currentPage > 1 && (
-  //         <button onClick={handlePrevPage} className="prev-button">
-  //           <FaArrowLeft />
-  //         </button>
-  //       )}
-  //           <div className="card-container " style={{alignItems:"center"}}>
-  //             {currentDoctors.map((doctor) => (
-  //               <DoctorCard key={doctor.id} doctor={doctor} />
-  //             ))}
-  //           </div>
-  //           {indexOfLastDoctor < doctors.length && (
-  //             <div className="pagination">
-  //               <button onClick={handleNextPage} className="next-button">
-  //                 <FaArrowRight />
-  //               </button>
-  //             </div>
-  //           )}
-  //         </div>
-
-     
-  //   );
-  // };
 
 
   const doctors = [

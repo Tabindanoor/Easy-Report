@@ -189,67 +189,10 @@ body {
       display: flex;
     }
   }
-  
-.search-doctor {
-  padding: 20px;
-  background-color: #8ddbc4;
-  text-align: center;
-  color: white;
-}
-
-.search-doctor h2 {
-  margin-bottom: 20px;
-}
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 5px;
-  /* overflow: hidden; */
-  width: 50%;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.search-icon {
-  color: #8ddbc4;
-  font-size: 17spx;
-  margin-top: 2px;
-  
-}
-
-.search-input {
-  border: none;
-  padding: 10px;
-  flex: 1;
-  outline: none;
-  color: #8ddbc4;
-}
-
-.search-btn {
-  padding: 10px 20px;
-  background-color: #8ddbc4;
-  border: none;
-  color: white;
-  width: 200px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    width: 90%;
-  }
-
-  .search-btn {
-    width: auto;
-  }
-}
+ 
 
 
-
-src/components/DoctorCard.css
+/* src/components/DoctorCard.css */
 .my-card {
   display: flex;
   justify-content: space-between;
@@ -292,7 +235,7 @@ src/components/DoctorCard.css
 
 .card-actions {
   padding: 16px;
-  background-color: lightgreen;
+
   text-align: center;
 }
 
@@ -333,37 +276,10 @@ src/components/DoctorCard.css
   margin-top: 16px;
 }
 
-.next-button {
-  text-align: center;
-  font-size: 1em;
-  margin: auto 0;
-  justify-content: center;
-  height: 50px;
-  width:50px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.prev-button{
-  text-align: center;
-  font-size: 1em;
-  margin: auto 0;
-  justify-content: center;
-  height: 50px;
-  width:50px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
 
 
 .card {
-  max-width: 300px;
+  max-width: 250px;
   height: 390px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -407,7 +323,6 @@ src/components/DoctorCard.css
 
 .card-actions {
   padding: 16px;
-  background-color: lightgreen;
   text-align: center;
 }
 
@@ -476,7 +391,7 @@ src/components/DoctorCard.css
   color: white;
 }
 
-.card {
+.my-card {
   max-width: 300px;
   height: auto;
   border: 1px solid #ccc;
@@ -489,9 +404,9 @@ src/components/DoctorCard.css
   flex-direction: column;
 }
 
-.card:hover {
+.my-card:hover {
   transform: scale(1.05);
-  border-color: lightgreen;
+  border-color: rgb(153, 216, 153);
 }
 
 .card-img {
@@ -520,15 +435,15 @@ src/components/DoctorCard.css
 
 .card-actions {
   padding: 16px;
-  background-color: #448b76;
+  background-color: white;
   text-align: center;
 }
 
 .card-button {
   display: inline-block;
   padding: 8px 16px;
-  background-color: white;
-  color: #448b76;
+  background-color: #448b76;
+  color: white;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -538,3 +453,68 @@ src/components/DoctorCard.css
   background-color: #29ba9a;
   color: white;
 }
+
+.search{
+  display: flex;
+  justify-content: space-between;
+}
+
+ 
+.search-doctor {
+  padding: 20px;
+  background-color: #8ddbc4;
+  text-align: center;
+  color: white;
+}
+
+.search-doctor h2 {
+  margin-bottom: 20px;
+}
+
+.search-container {
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  width: 500;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.search-icon {
+  color: #8ddbc4;
+  font-size: 17spx;
+  margin-top: 2px;
+  
+}
+
+.search-input {
+  border: none;
+  padding: 10px;
+  /* flex: 1; */
+  outline: none;
+  color: #8ddbc4;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #448b76;
+  border: none;
+  color: white;
+  width: 150px;
+  cursor: pointer;
+}
+
+
+.my-search{
+  display: flex;
+  
+}
+
+
+
+
