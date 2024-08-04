@@ -146,76 +146,91 @@ const Patientdasboard = () => {
     };
   
     return (
-<div>
-
-      <div className="card__collection my-container ">
-        {/* {
-          doctors.map((data)=>(
-
-            <div className="card__collection ">
-  
-            <div className="cards cards--three">
-              <img
-                src={doctorImage}
-                className="img-responsive"
-                alt="Cards"
-              />
-              <span className="cards--three__rect-1">
-                <span className="shadow-1"></span>
-                <p>Chris Levnon</p>
-              </span>
-              <span className="cards--three__rect-2">
-                <span className="shadow-2"></span>
-              </span>
-              <span className=""></span>
-              <ul className="cards--three__list">
-                <li><i className="fab fa-facebook-f"></i></li>
-                <li><i className="fab fa-twitter"></i></li>
-                <li><i className="fab fa-linkedin-in"></i></li>
-              </ul>
-            </div>
-          </div>
-
-          ))
-        } */}
-    
-
+      <div className="container">
+  <div className="sidebar">
+    <div className="search-doctor">
+      <h2>Search for a Doctor</h2>
+      <div className="my-search">
+        <div className="input-container">
+          <FaSearch className="search-icon" />
+          <input type="text" placeholder="Search..." className="search-input" />
+        </div>
+        <button className="search-btn">Search</button>
+      </div>
     </div>
-      <div className="my-container">
-        <div className="card-container">
-          {currentDoctors.map((doctor) => (
-            <DoctorCard key={doctor.id} doctor={doctor} />
-          ))}
-        </div>
-        <div className="pagination">
-          <button
-            onClick={handlePreviousPage}
-            className="prev-button"
-            disabled={currentPage === 1}
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            onClick={handleNextPage}
-            className="next-button"
-            disabled={indexOfLastDoctor >= doctors.length}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-      </div>
-      </div>
+  </div>
+  <div className="main-content">
+    <div className="card-container">
+      {currentDoctors.map((doctor) => (
+        <DoctorCard key={doctor.id} doctor={doctor} />
+      ))}
+    </div>
+    <div className="pagination">
+      <button
+        onClick={handlePreviousPage}
+        className="prev-button"
+        disabled={currentPage === 1}
+      >
+        <FaArrowLeft />
+      </button>
+      <button
+        onClick={handleNextPage}
+        className="next-button"
+        disabled={indexOfLastDoctor >= doctors.length}
+      >
+        <FaArrowRight />
+      </button>
+    </div>
+  </div>
+</div>
+
+//       <div className="container">
+//   <div className="sidebar">
+//     <div className="search-doctor">
+//       <h2>Search for a Doctor</h2>
+//       <div className="my-search">
+//         <div className="input-container">
+//           <FaSearch className="search-icon" />
+//           <input type="text" placeholder="Search..." className="search-input" />
+//         </div>
+//         <button className="search-btn">Search</button>
+//       </div>
+//     </div>
+//   </div>
+//   <div className="main-content">
+//     <div className="card-container">
+//       {currentDoctors.map((doctor) => (
+//         <DoctorCard key={doctor.id} doctor={doctor} />
+//       ))}
+//     </div>
+//     <div className="pagination">
+//       <button
+//         onClick={handlePreviousPage}
+//         className="prev-button"
+//         disabled={currentPage === 1}
+//       >
+//         <FaArrowLeft />
+//       </button>
+//       <button
+//         onClick={handleNextPage}
+//         className="next-button"
+//         disabled={indexOfLastDoctor >= doctors.length}
+//       >
+//         <FaArrowRight />
+//       </button>
+//     </div>
+//   </div>
+// </div>
+
     );
   };
 
 
-
   
-
   return (
     <div>
     <Navbar/> 
-    <SearchDoctor/>
+    {/* <SearchDoctor/> */}
     <DoctorList/>
 
 
