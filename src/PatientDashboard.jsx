@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./PateintDashboard.css";
 import logo from "../public/logo.png";
 import { FaArrowLeft, FaArrowRight, FaBriefcase, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
 import doctorImage from "../public/doctor.png";
+import { FaUserMd, FaSmile, FaStar, FaUsers, FaCalendarCheck } from 'react-icons/fa';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
 
 const PatientDashboard = () => {
   const Navbar = () => {
@@ -98,7 +100,7 @@ const PatientDashboard = () => {
 
 
     return (
-      <div className="container">
+      <div className="my-container">
       <div className="sidebar">
         <p style={{fontSize:"20px", lineHeight:"40px",fontWeight:"bold"}}>Categories</p>
         <ul>
@@ -114,7 +116,7 @@ const PatientDashboard = () => {
         </ul>
       </div>
       <div className="main-content">
-        <div className="card-container">
+        <div className="card-container" >
           {doctors.map((doctor) => (
             <DoctorCard key={doctor.id} doctor={doctor} />
           ))}
@@ -145,11 +147,143 @@ return(
     </div>  </div>
 )
 }
+
+
+
+const StatsCard = () => {
+  const stats = [
+    { icon: <FaUserMd />, title: 'Total Doctors ', value: 120, color: '#8ddbc4' },
+    { icon: <FaSmile />, title: 'Happy Clients', value: 1500, color: '#b2d8b2' },
+    { icon: <FaStar />, title: 'Average Rating', value: '4.8', color: '#a0d6e3' },
+    { icon: <FaUsers />, title: 'Active Patients', value: 3000, color: '#c0e4d1' },
+    { icon: <FaCalendarCheck />, title: 'Appointments', value: 4500, color: '#e2d3d4' },
+  ];
+
+  const [animatedStats, setAnimatedStats] = useState(
+    stats.map(stat => ({ ...stat, animatedValue: 0 }))
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimatedStats(currentStats =>
+        currentStats.map(stat => ({
+          ...stat,
+          animatedValue: Math.min(stat.animatedValue + Math.ceil(stat.value / 100), stat.value)
+        }))
+      );
+    }, 30);
+
+    if (animatedStats.every(stat => stat.animatedValue === stat.value)) {
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  }, [animatedStats]);
+
+  return (
+    <div className="my-4">
+      <div className="">
+        <div className="row justify-content-center">
+          {animatedStats.map((stat, index) => (
+            <div className="col-md-2 col-sm-3 col-6  d-flex" key={index}>
+              <div 
+                className="card stat-card"
+                style={{ 
+                  border: `2px solid ${stat.color}`, 
+                  borderRadius: '10px', 
+                  textAlign: 'center',
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' 
+                }}
+              >
+                <div className="card-body d-flex flex-column justify-content-center align-items-center">
+                  <div style={{ fontSize: '30px', color: "#366e5b" }}>
+                    {stat.icon}
+                  </div>
+                  <h5 className="card-title mt-3" style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                    {stat.title}
+                  </h5>
+                  <p className="card-text" style={{ fontSize: '20px', fontWeight: '600', color: '#333' }}>
+                    {stat.animatedValue}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+// const FAQSection = () => {
+//   const [openIndex, setOpenIndex] = useState(null);
+
+//   const faqs = [
+//     { question: 'How can I book an appointment?', answer: 'You can book an appointment through our website by selecting a date and time from the available slots.' },
+//     { question: 'What should I prepare for my online consultation?', answer: 'Ensure you have a stable internet connection and a quiet space. Have your medical history and any relevant documents ready.' },
+//     { question: 'Are online consultations secure?', answer: 'Yes, we use encrypted video calls and secure platforms to ensure your privacy and data protection.' },
+//     { question: 'How do I get a prescription from an online consultation?', answer: 'After the consultation, the doctor will provide a prescription electronically, which you can access through your account.' },
+//     { question: 'Can I get a refund if I’m not satisfied with my consultation?', answer: 'If you’re not satisfied, please contact our support team within 24 hours for a review and possible refund.' }
+//   ];
+
+//   const handleToggle = (index) => {
+//     setOpenIndex(openIndex === index ? null : index);
+//   };
+
+//   return (
+//     <section className="faq-section py-5" style={{ background: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', textAlign: 'center' }}>
+//       <div className="container">
+//         <div className="row justify-content-center">
+//           <div className="">
+//             <h2 className="text-center mb-4" style={{ color: '#333' }}>Frequently Asked Questions</h2>
+//             <div className="accordion">
+//               {faqs.map((faq, index) => (
+//                 <div className="card mb-3" key={index} style={{ borderRadius: '8px', overflow: 'hidden', textAlign: 'left' }}>
+//                   <div className="card-header" id={`heading${index}`} style={{ background: '#ffffff', borderBottom: '1px solid #ddd' }}>
+//                     <h5 className="mb-0">
+//                       <button
+//                         className="btn btn-link d-flex justify-content-between align-items-center w-100"
+//                         type="button"
+//                         onClick={() => handleToggle(index)}
+//                         style={{ color: '#007bff', fontWeight: 'bold' }}
+//                       >
+//                         {faq.question}
+//                         <span className={`icon ${openIndex === index ? 'open' : ''}`} style={{ fontSize: '1.5rem' }}>
+//                           {openIndex === index ? '-' : '+'}
+//                         </span>
+//                       </button>
+//                     </h5>
+//                   </div>
+//                   <div
+//                     id={`collapse${index}`}
+//                     className={`collapse ${openIndex === index ? 'show' : ''}`}
+//                     aria-labelledby={`heading${index}`}
+//                     style={{ background: '#ffffff', borderTop: '1px solid #ddd' }}
+//                   >
+//                     <div className="card-body">
+//                       {faq.answer}
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
   return (
     <div>
       <Navbar />
       <Picture/>
+      <StatsCard/>
       <DoctorList />
+      {/* <FAQSection/> */}
+
     </div>
   );
 }
