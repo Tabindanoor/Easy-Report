@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import "./PateintDashboard.css"
-import logo from "../public/logo.png"
-import { FaArrowLeft, FaArrowRight, FaBriefcase, FaMapMarkerAlt, FaSearch } from 'react-icons/fa'; 
-import doctorImg from "../public/doctor.jpg"
-import doctorImage from "../public/doctor.png"
-const Patientdasboard = () => {
+import React, { useState } from 'react';
+import "./PateintDashboard.css";
+import logo from "../public/logo.png";
+import { FaArrowLeft, FaArrowRight, FaBriefcase, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
+import doctorImage from "../public/doctor.png";
 
- 
+const PatientDashboard = () => {
   const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-  
+
     const toggleMenu = () => {
       setIsOpen(!isOpen);
     };
-  
+
     return (
-      <nav className="navbar  "  >
-        <div className="logo" ><img src={logo} alt="logo" width={50} height={50} /></div>
+      <nav className="navbar">
+        <div className="logo">
+          <img src={logo} alt="logo" width={50} height={50} />
+        </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><a href="#">Home</a></li>
           <li><a href="#">Appointments</a></li>
@@ -36,83 +36,26 @@ const Patientdasboard = () => {
   };
 
 
-  const SearchDoctor = () => {
-    return (
-    //   <div className="search-doctor">
-    //   <h2>Search for a Doctor</h2>
-        
-    //     <div className='my-search' style={{margin:"auto 0 ",  justifySelf:"center",justifyContent:"center"}}>
-          
-    //     <input type="text" placeholder="Search..." className="search-input" />
-       
-    //    <button className="search-btn" >  <FaSearch className="search-icon"   /> Search  </button>
-
-    //     </div>
-    // </div>
-    <div className="search-doctor">
-    <h2>Search for a Doctor</h2>
-    <div className='my-search' style={{margin:"auto 0", justifySelf:"center", justifyContent:"center"}}>
-      <div className="input-container">
-        <FaSearch className="search-icon" />
-        <input type="text" placeholder="Search..." className="search-input" />
-      </div>
-      <button className="search-btn">Search</button>
-    </div>
-  </div>
-    );
-  };
-
-
-
   const DoctorCard = ({ doctor }) => {
-    return (
 
-      <div className="card__collection " style={{backgroundColor:"white"}}>
-  
-      <div className="cards cards--three">
+    return (
+      <div className="doctor-card">
         <img
           src={doctorImage}
-          className="img-responsive"
-          alt="Cards"
+          className="doctor-img"
+          alt="Doctor"
+          style={{ borderRadius: "100%", width: "150px", height: "150px" }}
         />
-        <span className="cards--three__rect-1">
-          <span className="shadow-1"></span>
-          <p>{doctor.name}</p>
-        </span>
-        <span className="cards--three__rect-2">
-          <span className="shadow-2"></span>
-        </span>
-        <span className=""></span>
-        <ul className="cards--three__list">
-          <li><i className="fab fa-facebook-f"></i></li>
-          <li><i className="fab fa-twitter"></i></li>
-          <li><i className="fab fa-linkedin-in"></i></li>
-        </ul>
+        <p className="card-title" style={{ fontSize: "18px", fontWeight: "bold" }}>{doctor.name}</p>
+        <p className="card-occupation">
+          <FaBriefcase /> {doctor.occupation}
+        </p>
+        <p className="card-city">
+          <FaMapMarkerAlt /> {doctor.city}
+        </p>
       </div>
-    </div>
-
-
-          // <div className="my-card">
-          //   <img className="card-img" src={doctorImg} alt={doctor.name} />
-          //   <div className="card-content">
-          //     <h2 className="card-title">{doctor.name}</h2>
-          //     <p className="card-occupation">
-          //       <FaBriefcase /> {doctor.occupation}
-          //     </p>
-          //     <p className="card-city">
-          //       <FaMapMarkerAlt /> {doctor.city}
-          //     </p>
-          //   </div>
-          //   <div className="card-actions">
-          //     <a href={`/doctor/${doctor.id}`} className="card-button">
-          //       More Details
-          //     </a>
-          //   </div>
-          // </div>
-   
     );
   };
-
 
   const doctors = [
     { id: 1, name: 'Dr. John Doe', occupation: 'Cardiologist', city: 'New York', image: 'doctor1.jpg' },
@@ -123,119 +66,92 @@ const Patientdasboard = () => {
     { id: 6, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
     { id: 7, name: 'Dr. James Davis', occupation: 'Surgeon', city: 'Phoenix', image: 'doctor5.jpg' },
     { id: 8, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
+    { id: 9, name: 'Dr. James Davis', occupation: 'Surgeon', city: 'Phoenix', image: 'doctor5.jpg' },
+    { id: 10, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
+    { id: 11, name: 'Dr. James Davis', occupation: 'Surgeon', city: 'Phoenix', image: 'doctor5.jpg' },
+    { id: 12, name: 'Dr. Patricia Wilson', occupation: 'Psychiatrist', city: 'Philadelphia', image: 'doctor6.jpg' },
+ 
   ];
+
+  const categories = [
+    'All',
+    'Cardiologist',
+    'Cancer Specialist',
+  ];
+
+
   
+
   const DoctorList = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const doctorsPerPage = 3;
-  
-    const indexOfLastDoctor = currentPage * doctorsPerPage;
-    const indexOfFirstDoctor = indexOfLastDoctor - doctorsPerPage;
-    const currentDoctors = doctors.slice(indexOfFirstDoctor, indexOfLastDoctor);
-  
-    const handleNextPage = () => {
-      if (indexOfLastDoctor < doctors.length) {
-        setCurrentPage((prevPage) => prevPage + 1);
-      }
-    };
-  
-    const handlePreviousPage = () => {
-      if (currentPage > 1) {
-        setCurrentPage((prevPage) => prevPage - 1);
-      }
-    };
-  
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    
+
+      
+      const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+      };
+    
+      const filteredDoctors = selectedCategory === 'All'
+        ? doctors
+        : doctors.filter(doctor => doctor.specialty === selectedCategory);
+
+
     return (
       <div className="container">
-  <div className="sidebar">
-    <div className="search-doctor">
-      <h2>Search for a Doctor</h2>
-      <div className="my-search">
-        <div className="input-container">
-          <FaSearch className="search-icon" />
-          <input type="text" placeholder="Search..." className="search-input" />
+      <div className="sidebar">
+        <p style={{fontSize:"20px", lineHeight:"40px",fontWeight:"bold"}}>Categories</p>
+        <ul>
+          {categories.map(category => (
+            <li
+              key={category}
+              className={category === selectedCategory ? 'active' : ''}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="main-content">
+        <div className="card-container">
+          {doctors.map((doctor) => (
+            <DoctorCard key={doctor.id} doctor={doctor} />
+          ))}
         </div>
-        <button className="search-btn">Search</button>
+        
       </div>
     </div>
-  </div>
-  <div className="main-content">
-    <div className="card-container">
-      {currentDoctors.map((doctor) => (
-        <DoctorCard key={doctor.id} doctor={doctor} />
-      ))}
-    </div>
-    <div className="pagination">
-      <button
-        onClick={handlePreviousPage}
-        className="prev-button"
-        disabled={currentPage === 1}
-      >
-        <FaArrowLeft />
-      </button>
-      <button
-        onClick={handleNextPage}
-        className="next-button"
-        disabled={indexOfLastDoctor >= doctors.length}
-      >
-        <FaArrowRight />
-      </button>
-    </div>
-  </div>
-</div>
-
-//       <div className="container">
-//   <div className="sidebar">
-//     <div className="search-doctor">
-//       <h2>Search for a Doctor</h2>
-//       <div className="my-search">
-//         <div className="input-container">
-//           <FaSearch className="search-icon" />
-//           <input type="text" placeholder="Search..." className="search-input" />
-//         </div>
-//         <button className="search-btn">Search</button>
-//       </div>
-//     </div>
-//   </div>
-//   <div className="main-content">
-//     <div className="card-container">
-//       {currentDoctors.map((doctor) => (
-//         <DoctorCard key={doctor.id} doctor={doctor} />
-//       ))}
-//     </div>
-//     <div className="pagination">
-//       <button
-//         onClick={handlePreviousPage}
-//         className="prev-button"
-//         disabled={currentPage === 1}
-//       >
-//         <FaArrowLeft />
-//       </button>
-//       <button
-//         onClick={handleNextPage}
-//         className="next-button"
-//         disabled={indexOfLastDoctor >= doctors.length}
-//       >
-//         <FaArrowRight />
-//       </button>
-//     </div>
-//   </div>
-// </div>
-
     );
   };
 
 
-  
+const Picture=()=>{
+return(
+  <div>
+ <div className="search-doctor-container">
+      <div className="background-image">
+        <div className="search-doctor">
+          <h2>Search for a Doctor</h2>
+          <div className="my-search">
+            <div className="input-container">
+              <FaSearch className="search-icon" />
+              <input type="text" placeholder="Search..." className="search-input" />
+            </div>
+            <button className="search-btn">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>  </div>
+)
+}
   return (
     <div>
-    <Navbar/> 
-    {/* <SearchDoctor/> */}
-    <DoctorList/>
-
-
+      <Navbar />
+      <Picture/>
+      <DoctorList />
     </div>
-  )
+  );
 }
 
-export default Patientdasboard
+export default PatientDashboard;
