@@ -222,7 +222,7 @@ const FAQSection =()=>{
 <div className="accordion-wrapper">
   <div className="accordion">
     <input type="radio" name="radio-a" id="check1" checked/>
-    <label className="accordion-label" for="check1">Accordion 1</label>
+    <label className="accordion-label" for="check1">Accordion 12</label>
     <div className="accordion-content">
       <p>Hey there, you are watching codiesbugs &#128522;</p>
     </div>
