@@ -134,7 +134,7 @@ return(
  <div className="search-doctor-container">
       <div className="background-image">
         <div className="search-doctor">
-          <h2>Search for a Doctor</h2>
+          <h2>Search htmlFor a Doctor</h2>
           <div className="my-search">
             <div className="input-container">
               <FaSearch className="search-icon" />
@@ -216,45 +216,45 @@ const StatsCard = () => {
 };
 
 
-const FAQSection =()=>{
-  return(
-    <div className='faq'  >
-<div className="accordion-wrapper">
-  <div className="accordion">
-    <input type="radio" name="radio-a" id="check1" checked/>
-    <label className="accordion-label" for="check1">Accordion 12</label>
-    <div className="accordion-content">
-      <p>Hey there, you are watching codiesbugs &#128522;</p>
-    </div>
-  </div>
-  <div className="accordion">
-    <input type="radio" name="radio-a" id="check2"/>
-    <label className="accordion-label" for="check2">Accordion 2</label>
-    <div className="accordion-content">
-      <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
-    </div>
-  </div>
-  <div className="accordion">
-    <input type="radio" name="radio-a" id="check3"/>
-    <label className="accordion-label" for="check3">Accordion 3</label>
-    <div className="accordion-content">
-      <p>If you liked then don't forget to subscribe the channel for latest videos. </p>
-    </div>
-  </div>
-</div>
-</div>
-  )
-}
+// const FAQSection =()=>{
+//   return(
+//     <div className='faq'  >
+// <div className="accordion-wrapper" style={{backgroundColor:"black"}}>
+//   <div className="accordion"  style={{backgroundColor:"blue"}}>
+//     <input type="radio" name="radio-a" id="check1" checked/>
+//     <label className="accordion-label" htmlFor="check1">Accordion 12</label>
+//     <div className="accordion-content">
+//       <p>Hey there, you are watching codiesbugs &#128522;</p>
+//     </div>
+//   </div>
+//   <div className="accordion"  style={{backgroundColor:"white"}}>
+//     <input type="radio" name="radio-a" id="check2"/>
+//     <label className="accordion-label" htmlFor="check2">Accordion 2</label>
+//     <div className="accordion-content">
+//       <p>I hope you are enjoing the video, don't htmlForget to give your feedback in comment section</p>
+//     </div>
+//   </div>
+//   <div className="accordion">
+//     <input type="radio" name="radio-a" id="check3"/>
+//     <label className="accordion-label" htmlFor="check3">Accordion 3</label>
+//     <div className="accordion-content">
+//       <p>If you liked then don't htmlForget to subscribe the channel htmlFor latest videos. </p>
+//     </div>
+//   </div>
+// </div>
+// </div>
+//   )
+// }
 
 // const FAQSection = () => {
 //   const [openIndex, setOpenIndex] = useState(null);
 
 //   const faqs = [
 //     { question: 'How can I book an appointment?', answer: 'You can book an appointment through our website by selecting a date and time from the available slots.' },
-//     { question: 'What should I prepare for my online consultation?', answer: 'Ensure you have a stable internet connection and a quiet space. Have your medical history and any relevant documents ready.' },
-//     { question: 'Are online consultations secure?', answer: 'Yes, we use encrypted video calls and secure platforms to ensure your privacy and data protection.' },
+//     { question: 'What should I prepare htmlFor my online consultation?', answer: 'Ensure you have a stable internet connection and a quiet space. Have your medical history and any relevant documents ready.' },
+//     { question: 'Are online consultations secure?', answer: 'Yes, we use encrypted video calls and secure plathtmlForms to ensure your privacy and data protection.' },
 //     { question: 'How do I get a prescription from an online consultation?', answer: 'After the consultation, the doctor will provide a prescription electronically, which you can access through your account.' },
-//     { question: 'Can I get a refund if I’m not satisfied with my consultation?', answer: 'If you’re not satisfied, please contact our support team within 24 hours for a review and possible refund.' }
+//     { question: 'Can I get a refund if I’m not satisfied with my consultation?', answer: 'If you’re not satisfied, please contact our support team within 24 hours htmlFor a review and possible refund.' }
 //   ];
 
 //   const handleToggle = (index) => {
@@ -262,12 +262,12 @@ const FAQSection =()=>{
 //   };
 
 //   return (
-//     <section className="faq-section py-5" style={{ background: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', textAlign: 'center' }}>
+//     <section className="faq-section py-5" style={{ background: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', textAlign: 'center', margin:"auto 0", justifyItems:"center" }}>
 //       <div className="container">
 //         <div className="row justify-content-center">
 //           <div className="">
 //             <h2 className="text-center mb-4" style={{ color: '#333' }}>Frequently Asked Questions</h2>
-//             <div className="accordion">
+//             <div className="accordion-wrapper">
 //               {faqs.map((faq, index) => (
 //                 <div className="card mb-3" key={index} style={{ borderRadius: '8px', overflow: 'hidden', textAlign: 'left' }}>
 //                   <div className="card-header" id={`heading${index}`} style={{ background: '#ffffff', borderBottom: '1px solid #ddd' }}>
@@ -305,13 +305,134 @@ const FAQSection =()=>{
 //   );
 // };
 
+// const FAQSection=()=>{
+//   return(
+//     <section className='section text-center'>
+//     <div class="containerr">
+//       <div class="accordion">
+//         <div class="accordion-item " id="question1">
+//           <a class="" href="#question1">
+//             <div class=" my-link " style={{textAlign:"center"}}>
+//               <p>BRANDING</p>
+              
+//             </div>
+//             <i class="icon ion-md-arrow-forward"></i>
+//             <i class="icon ion-md-arrow-down"></i>
+//           </a>
+//           <div class="answer">
+//             <p> We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this</p>
+//           </div>
+          
+//       </div>
+//         <div class="accordion-item" id="question2">
+//           <a class="accordion-link" href="#question2">
+//             <div class="flex ">
+//               <p>UX/UI DESIGN</p>
+              
+//             </div>
+//             <i class="icon ion-md-arrow-forward"></i>
+//             <i class="icon ion-md-arrow-down"></i>
+//           </a>
+//           <div class="answer">
+//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+//           </div>
+//       </div>
+//         <div class="accordion-item" id="question3">
+//           <a class="accordion-link" href="#question3">
+//             <div class="flex">
+//               <p>FRONTEND DEVELOPMENT</p>
+              
+//             </div>
+           
+//           </a>
+//           <div class="answer">
+//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+//           </div>
+          
+//       </div>
+//         <div class="accordion-item" id="question4">
+//           <a class="accordion-link" href="#question4">
+//             <div>
+//               <p>BACKEND DEVELOPMENT</p>
+              
+//             </div>
+//             <i class="icon ion-md-arrow-forward"></i>
+//             <i class="icon ion-md-arrow-down"></i>
+//           </a>
+//           <div class="answer">
+//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+//           </div>
+          
+//       </div>
+//      </div>
+//     </div>
+//   </section>
+//   )
+// }
+
+
+
+import React, { useState } from 'react';
+
+const FAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const faqData = [
+    {
+      question: 'BRANDING',
+      answer: 'We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this'
+    },
+    {
+      question: 'UX/UI DESIGN',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
+    },
+    {
+      question: 'FRONTEND DEVELOPMENT',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
+    },
+    {
+      question: 'BACKEND DEVELOPMENT',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
+    }
+  ];
+
+  const toggleActive = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className='section text-center'>
+      <div className="containerr">
+        <div className="accordion">
+          {faqData.map((item, index) => (
+            <div key={index} className={`accordion-item ${activeIndex === index ? 'active' : ''}`} id={`question${index + 1}`}>
+              <a className="accordion-link" href={`#question${index + 1}`} onClick={() => toggleActive(index)}>
+                <div className="my-link" style={{ textAlign: "center" }}>
+                  <p>{item.question}</p>
+                </div>
+                <i className={`icon ion-md-arrow-forward ${activeIndex === index ? 'hidden' : ''}`}></i>
+                <i className={`icon ion-md-arrow-down ${activeIndex === index ? '' : 'hidden'}`}></i>
+              </a>
+              <div className={`answer ${activeIndex === index ? 'active' : ''}`}>
+                <p>{item.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
   return (
     <div>
       {/* <Navbar /> */}
       {/* <Picture/> */}
-      <StatsCard/>
+      {/* <StatsCard/> */}
       {/* <DoctorList /> */}
-      {/* <FAQSection/> */}
+      <FAQSection/>
 
     </div>
   );
