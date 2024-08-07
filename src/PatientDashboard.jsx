@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./PateintDashboard.css";
 import logo from "../public/logo.png";
-import { FaArrowLeft, FaArrowRight, FaBriefcase, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaBriefcase, FaChevronLeft, FaChevronRight, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
 import doctorImage from "../public/doctor.png";
 import { FaUserMd, FaSmile, FaStar, FaUsers, FaCalendarCheck } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
@@ -372,26 +372,25 @@ const StatsCard = () => {
 
 
 
-import React, { useState } from 'react';
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqData = [
     {
-      question: 'BRANDING',
+      question: 'We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this',
       answer: 'We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this'
     },
     {
-      question: 'UX/UI DESIGN',
+      question: 'We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this',
       answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
     },
     {
-      question: 'FRONTEND DEVELOPMENT',
+      question: 'We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this',
       answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
     },
     {
-      question: 'BACKEND DEVELOPMENT',
+      question: 'We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this',
       answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
     }
   ];
@@ -401,12 +400,12 @@ const FAQSection = () => {
   };
 
   return (
-    <section className='section text-center'>
-      <div className="containerr">
+    <section className=' text-center'>
+      <div className="">
         <div className="accordion">
           {faqData.map((item, index) => (
             <div key={index} className={`accordion-item ${activeIndex === index ? 'active' : ''}`} id={`question${index + 1}`}>
-              <a className="accordion-link" href={`#question${index + 1}`} onClick={() => toggleActive(index)}>
+              <a className="accordion-link" style={{textDecoration:"none",textAlign:"center"}} href={`#question${index + 1}`} onClick={() => toggleActive(index)}>
                 <div className="my-link" style={{ textAlign: "center" }}>
                   <p>{item.question}</p>
                 </div>
@@ -426,6 +425,260 @@ const FAQSection = () => {
 
 
 
+
+const TestimonialCarousel = () => {
+  return (
+    <div className="container-lg">
+      <div className="row">
+        <div className="col-sm-12">			
+          <div id="myCarousel" className="carousel slide" data-ride="carousel">
+            <h2>Customer <b>Testimonials</b></h2>
+            {/* Carousel indicators */}
+            <ol className="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>   
+            {/* Wrapper for carousel items */}
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <div className="row">
+                  <div className="col-sm-6">
+                    <div className="testimonial">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+                    </div>
+                    <div className="media">
+                      <img src="/examples/images/clients/1.jpg" className="mr-3" alt="" />
+                      <div className="media-body">
+                        <div className="overview">
+                          <div className="name"><b>Paula Wilson</b></div>
+                          <div className="details">Media Analyst / SkyNet</div>
+                          <div className="star-rating">
+                            <ul className="list-inline">
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star-o"></i></li>
+                            </ul>
+                          </div>
+                        </div>										
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="testimonial">
+                      <p>Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.</p>
+                    </div>
+                    <div className="media">
+                      <img src="/examples/images/clients/2.jpg" className="mr-3" alt="" />
+                      <div className="media-body">
+                        <div className="overview">
+                          <div className="name"><b>Antonio Moreno</b></div>
+                          <div className="details">Web Developer / SoftBee</div>
+                          <div className="star-rating">
+                            <ul className="list-inline">
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star-o"></i></li>
+                            </ul>
+                          </div>
+                        </div>										
+                      </div>
+                    </div>
+                  </div>
+                </div>			
+              </div>
+              <div className="carousel-item">
+                <div className="row">
+                  <div className="col-sm-6">
+                    <div className="testimonial">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+                    </div>
+                    <div className="media">
+                      <img src="/examples/images/clients/3.jpg" className="mr-3" alt="" />
+                      <div className="media-body">
+                        <div className="overview">
+                          <div className="name"><b>Michael Holz</b></div>
+                          <div className="details">Web Developer / DevCorp</div>											
+                          <div className="star-rating">
+                            <ul className="list-inline">
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
+                              <li className="list-inline-item"><i className="fa fa-star
+-o"></i></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="col-sm-6">
+<div className="testimonial">
+<p>Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.</p>
+</div>
+<div className="media">
+<img src="/examples/images/clients/4.jpg" className="mr-3" alt="" />
+<div className="media-body">
+<div className="overview">
+<div className="name"><b>Anna Gora</b></div>
+<div className="details">Senior Developer / TechGiant</div>
+<div className="star-rating">
+<ul className="list-inline">
+<li className="list-inline-item"><i className="fa fa-star"></i></li>
+<li className="list-inline-item"><i className="fa fa-star"></i></li>
+<li className="list-inline-item"><i className="fa fa-star"></i></li>
+<li className="list-inline-item"><i className="fa fa-star"></i></li>
+<li className="list-inline-item"><i className="fa fa-star-o"></i></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{/* Carousel controls */}
+<a className="carousel-control-prev" href="#myCarousel" data-slide="prev">
+<i className="fa fa-chevron-left"></i>
+</a>
+<a className="carousel-control-next" href="#myCarousel" data-slide="next">
+<i className="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+);
+};
+
+
+const testimonials = [
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.",
+    imgSrc: "/examples/images/clients/1.jpg",
+    name: "Paula Wilson",
+    details: "Media Analyst / SkyNet",
+    rating: 4
+  },
+  {
+    text: "Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.",
+    imgSrc: "/examples/images/clients/2.jpg",
+    name: "Antonio Moreno",
+    details: "Web Developer / SoftBee",
+    rating: 4
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.",
+    imgSrc: "/examples/images/clients/3.jpg",
+    name: "Michael Holz",
+    details: "Web Developer / DevCorp",
+    rating: 4
+  },
+  {
+    text: "Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.",
+    imgSrc: "/examples/images/clients/4.jpg",
+    name: "Mary Saveley",
+    details: "Graphic Designer / MarsMedia",
+    rating: 4
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.",
+    imgSrc: "/examples/images/clients/5.jpg",
+    name: "Martin Sommer",
+    details: "SEO Analyst / RealSearch",
+    rating: 4
+  },
+  {
+    text: "Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.",
+    imgSrc: "/examples/images/clients/6.jpg",
+    name: "John Williams",
+    details: "Web Designer / UniqueDesign",
+    rating: 4
+  }
+];
+
+const Carousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  return (
+    <div className="container-lg">
+      <div className="row">
+        <div className="col-sm-12">
+          <div id="myCarousel" className="carousel">
+            <h2>Customer <b>Testimonials</b></h2>
+            <ol className="carousel-indicators">
+              {testimonials.map((_, index) => (
+                <li
+                  key={index}
+                  data-target="#myCarousel"
+                  data-slide-to={index}
+                  className={index === currentIndex ? 'active' : ''}
+                ></li>
+              ))}
+            </ol>
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <div className="row">
+                  <div className="col-sm-6">
+                    <div className="testimonial">
+                      <p>{testimonials[currentIndex].text}</p>
+                    </div>
+                    <div className="media">
+                      <img
+                        src={testimonials[currentIndex].imgSrc}
+                        className="mr-3"
+                        alt=""
+                      />
+                      <div className="media-body">
+                        <div className="overview">
+                          <div className="name"><b>{testimonials[currentIndex].name}</b></div>
+                          <div className="details">{testimonials[currentIndex].details}</div>
+                          <div className="star-rating">
+                            <ul className="list-inline">
+                              {Array.from({ length: 5 }, (_, i) => (
+                                <li className="list-inline-item" key={i}>
+                                  <i className={`fa ${i < testimonials[currentIndex].rating ? 'fa-star' : 'fa-star-o'}`}></i>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a className="carousel-control-prev" onClick={handlePrevClick}>
+              <FaChevronLeft />
+            </a>
+            <a className="carousel-control-next" onClick={handleNextClick}>
+              <FaChevronRight />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
   return (
     <div>
       {/* <Navbar /> */}
@@ -433,6 +686,8 @@ const FAQSection = () => {
       {/* <StatsCard/> */}
       {/* <DoctorList /> */}
       <FAQSection/>
+      <TestimonialCarousel/>
+      <Carousel/>
 
     </div>
   );
