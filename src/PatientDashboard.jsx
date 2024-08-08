@@ -5,6 +5,8 @@ import { FaArrowLeft, FaArrowRight, FaBriefcase, FaChevronLeft, FaChevronRight, 
 import doctorImage from "../public/doctor.png";
 import { FaUserMd, FaSmile, FaStar, FaUsers, FaCalendarCheck } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+
 
 const PatientDashboard = () => {
   const Navbar = () => {
@@ -134,7 +136,7 @@ return(
  <div className="search-doctor-container">
       <div className="background-image">
         <div className="search-doctor">
-          <h2>Search htmlFor a Doctor</h2>
+          <p style={{fontWeight:"bold", textAlign:"center",fontSize:"28px"}}>Search For a Doctor</p>
           <div className="my-search">
             <div className="input-container">
               <FaSearch className="search-icon" />
@@ -216,161 +218,70 @@ const StatsCard = () => {
 };
 
 
-// const FAQSection =()=>{
-//   return(
-//     <div className='faq'  >
-// <div className="accordion-wrapper" style={{backgroundColor:"black"}}>
-//   <div className="accordion"  style={{backgroundColor:"blue"}}>
-//     <input type="radio" name="radio-a" id="check1" checked/>
-//     <label className="accordion-label" htmlFor="check1">Accordion 12</label>
-//     <div className="accordion-content">
-//       <p>Hey there, you are watching codiesbugs &#128522;</p>
-//     </div>
-//   </div>
-//   <div className="accordion"  style={{backgroundColor:"white"}}>
-//     <input type="radio" name="radio-a" id="check2"/>
-//     <label className="accordion-label" htmlFor="check2">Accordion 2</label>
-//     <div className="accordion-content">
-//       <p>I hope you are enjoing the video, don't htmlForget to give your feedback in comment section</p>
-//     </div>
-//   </div>
-//   <div className="accordion">
-//     <input type="radio" name="radio-a" id="check3"/>
-//     <label className="accordion-label" htmlFor="check3">Accordion 3</label>
-//     <div className="accordion-content">
-//       <p>If you liked then don't htmlForget to subscribe the channel htmlFor latest videos. </p>
-//     </div>
-//   </div>
-// </div>
-// </div>
-//   )
-// }
-
-// const FAQSection = () => {
-//   const [openIndex, setOpenIndex] = useState(null);
-
-//   const faqs = [
-//     { question: 'How can I book an appointment?', answer: 'You can book an appointment through our website by selecting a date and time from the available slots.' },
-//     { question: 'What should I prepare htmlFor my online consultation?', answer: 'Ensure you have a stable internet connection and a quiet space. Have your medical history and any relevant documents ready.' },
-//     { question: 'Are online consultations secure?', answer: 'Yes, we use encrypted video calls and secure plathtmlForms to ensure your privacy and data protection.' },
-//     { question: 'How do I get a prescription from an online consultation?', answer: 'After the consultation, the doctor will provide a prescription electronically, which you can access through your account.' },
-//     { question: 'Can I get a refund if I’m not satisfied with my consultation?', answer: 'If you’re not satisfied, please contact our support team within 24 hours htmlFor a review and possible refund.' }
-//   ];
-
-//   const handleToggle = (index) => {
-//     setOpenIndex(openIndex === index ? null : index);
-//   };
-
-//   return (
-//     <section className="faq-section py-5" style={{ background: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', textAlign: 'center', margin:"auto 0", justifyItems:"center" }}>
-//       <div className="container">
-//         <div className="row justify-content-center">
-//           <div className="">
-//             <h2 className="text-center mb-4" style={{ color: '#333' }}>Frequently Asked Questions</h2>
-//             <div className="accordion-wrapper">
-//               {faqs.map((faq, index) => (
-//                 <div className="card mb-3" key={index} style={{ borderRadius: '8px', overflow: 'hidden', textAlign: 'left' }}>
-//                   <div className="card-header" id={`heading${index}`} style={{ background: '#ffffff', borderBottom: '1px solid #ddd' }}>
-//                     <h5 className="mb-0">
-//                       <button
-//                         className="btn btn-link d-flex justify-content-between align-items-center w-100"
-//                         type="button"
-//                         onClick={() => handleToggle(index)}
-//                         style={{ color: '#007bff', fontWeight: 'bold' }}
-//                       >
-//                         {faq.question}
-//                         <span className={`icon ${openIndex === index ? 'open' : ''}`} style={{ fontSize: '1.5rem' }}>
-//                           {openIndex === index ? '-' : '+'}
-//                         </span>
-//                       </button>
-//                     </h5>
-//                   </div>
-//                   <div
-//                     id={`collapse${index}`}
-//                     className={`collapse ${openIndex === index ? 'show' : ''}`}
-//                     aria-labelledby={`heading${index}`}
-//                     style={{ background: '#ffffff', borderTop: '1px solid #ddd' }}
-//                   >
-//                     <div className="card-body">
-//                       {faq.answer}
-//                     </div>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// const FAQSection=()=>{
-//   return(
-//     <section className='section text-center'>
-//     <div class="containerr">
-//       <div class="accordion">
-//         <div class="accordion-item " id="question1">
-//           <a class="" href="#question1">
-//             <div class=" my-link " style={{textAlign:"center"}}>
-//               <p>BRANDING</p>
-              
-//             </div>
-//             <i class="icon ion-md-arrow-forward"></i>
-//             <i class="icon ion-md-arrow-down"></i>
-//           </a>
-//           <div class="answer">
-//             <p> We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this</p>
-//           </div>
-          
-//       </div>
-//         <div class="accordion-item" id="question2">
-//           <a class="accordion-link" href="#question2">
-//             <div class="flex ">
-//               <p>UX/UI DESIGN</p>
-              
-//             </div>
-//             <i class="icon ion-md-arrow-forward"></i>
-//             <i class="icon ion-md-arrow-down"></i>
-//           </a>
-//           <div class="answer">
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-//           </div>
-//       </div>
-//         <div class="accordion-item" id="question3">
-//           <a class="accordion-link" href="#question3">
-//             <div class="flex">
-//               <p>FRONTEND DEVELOPMENT</p>
-              
-//             </div>
-           
-//           </a>
-//           <div class="answer">
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-//           </div>
-          
-//       </div>
-//         <div class="accordion-item" id="question4">
-//           <a class="accordion-link" href="#question4">
-//             <div>
-//               <p>BACKEND DEVELOPMENT</p>
-              
-//             </div>
-//             <i class="icon ion-md-arrow-forward"></i>
-//             <i class="icon ion-md-arrow-down"></i>
-//           </a>
-//           <div class="answer">
-//             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-//           </div>
-          
-//       </div>
-//      </div>
-//     </div>
-//   </section>
-//   )
-// }
 
 
+const Footer = () => {
+  return (
+    <footer className=" text-white pt-5 pb-4 px-5 footer"   >
+      <div className="">
+        <div className="row">
+          {/* About Section */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <h5 className="text-uppercase mb-4">About Us</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis, eros in cursus egestas, libero sapien facilisis urna, nec tincidunt felis nunc eu nisl.</p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <h5 className="text-uppercase mb-4">Quick Links</h5>
+            <ul className="list-unstyled">
+              <li><a href="#!" className="text-white">Home</a></li>
+              <li><a href="#!" className="text-white">About</a></li>
+              <li><a href="#!" className="text-white">Services</a></li>
+              <li><a href="#!" className="text-white">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="col-lg-4 col-md-12 mb-4">
+            <h5 className="text-uppercase mb-4">Contact Us</h5>
+            <p><i className="fa fa-home mr-3"></i> 123 Main Street, City, Country</p>
+            <p><i className="fa fa-envelope mr-3"></i> email@example.com</p>
+            <p><i className="fa fa-phone mr-3"></i> +123 456 7890</p>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-12 text-center">
+            <ul className="list-inline mb-0">
+              <li className="list-inline-item">
+                <a href="#!" className="text-white">
+                  <FaFacebookF />
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#!" className="text-white">
+                  <FaTwitter />
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#!" className="text-white">
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#!" className="text-white">
+                  <FaInstagram />
+                </a>
+              </li>
+            </ul>
+            <p className="mt-4 mb-0">© {new Date().getFullYear()} Your Company. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 
 const FAQSection = () => {
@@ -424,138 +335,92 @@ const FAQSection = () => {
 };
 
 
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
 
+  const handleAccordionClick = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-const TestimonialCarousel = () => {
+  const Questions = [
+    {
+      question: "How do I place an order?",
+      answer: "You can browse the menu, select your favorite dishes, and add them to your cart. Once you’re ready, proceed to checkout and follow the prompts to complete your order."
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer: "We accept various payment methods, including credit/debit cards, PayPal, and online payment options like Stripe. You can also choose to pay cash on delivery if available."
+    },
+    {
+      question: "Can I schedule an order for later?",
+      answer: "Yes, you can schedule orders for a later time or date during the checkout process. Simply select your preferred delivery time, and we’ll ensure your food arrives fresh and on time."
+    },
+    {
+      question: "What if I have an issue with my order?",
+      answer: "If you encounter any issues with your order, please contact our customer support team immediately through the app or website. We are committed to resolving any problems promptly to ensure your satisfaction."
+    },
+    {
+      question: "Can I customize my order?",
+      answer: "Yes, you can customize your order by adding special instructions or selecting specific preferences for your dishes during the ordering process. Our kitchen will do its best to accommodate your requests."
+    }
+  ];
+
   return (
-    <div className="container-lg">
-      <div className="row">
-        <div className="col-sm-12">			
-          <div id="myCarousel" className="carousel slide" data-ride="carousel">
-            <h2>Customer <b>Testimonials</b></h2>
-            {/* Carousel indicators */}
-            <ol className="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>   
-            {/* Wrapper for carousel items */}
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <div className="row">
-                  <div className="col-sm-6">
-                    <div className="testimonial">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
-                    </div>
-                    <div className="media">
-                      <img src="/examples/images/clients/1.jpg" className="mr-3" alt="" />
-                      <div className="media-body">
-                        <div className="overview">
-                          <div className="name"><b>Paula Wilson</b></div>
-                          <div className="details">Media Analyst / SkyNet</div>
-                          <div className="star-rating">
-                            <ul className="list-inline">
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star-o"></i></li>
-                            </ul>
-                          </div>
-                        </div>										
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-6">
-                    <div className="testimonial">
-                      <p>Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.</p>
-                    </div>
-                    <div className="media">
-                      <img src="/examples/images/clients/2.jpg" className="mr-3" alt="" />
-                      <div className="media-body">
-                        <div className="overview">
-                          <div className="name"><b>Antonio Moreno</b></div>
-                          <div className="details">Web Developer / SoftBee</div>
-                          <div className="star-rating">
-                            <ul className="list-inline">
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star-o"></i></li>
-                            </ul>
-                          </div>
-                        </div>										
-                      </div>
-                    </div>
-                  </div>
-                </div>			
-              </div>
-              <div className="carousel-item">
-                <div className="row">
-                  <div className="col-sm-6">
-                    <div className="testimonial">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
-                    </div>
-                    <div className="media">
-                      <img src="/examples/images/clients/3.jpg" className="mr-3" alt="" />
-                      <div className="media-body">
-                        <div className="overview">
-                          <div className="name"><b>Michael Holz</b></div>
-                          <div className="details">Web Developer / DevCorp</div>											
-                          <div className="star-rating">
-                            <ul className="list-inline">
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star"></i></li>
-                              <li className="list-inline-item"><i className="fa fa-star
--o"></i></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div className="col-sm-6">
-<div className="testimonial">
-<p>Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.</p>
-</div>
-<div className="media">
-<img src="/examples/images/clients/4.jpg" className="mr-3" alt="" />
-<div className="media-body">
-<div className="overview">
-<div className="name"><b>Anna Gora</b></div>
-<div className="details">Senior Developer / TechGiant</div>
-<div className="star-rating">
-<ul className="list-inline">
-<li className="list-inline-item"><i className="fa fa-star"></i></li>
-<li className="list-inline-item"><i className="fa fa-star"></i></li>
-<li className="list-inline-item"><i className="fa fa-star"></i></li>
-<li className="list-inline-item"><i className="fa fa-star"></i></li>
-<li className="list-inline-item"><i className="fa fa-star-o"></i></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-{/* Carousel controls */}
-<a className="carousel-control-prev" href="#myCarousel" data-slide="prev">
-<i className="fa fa-chevron-left"></i>
-</a>
-<a className="carousel-control-next" href="#myCarousel" data-slide="next">
-<i className="fa fa-chevron-right"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-);
+    <div className="  p-5">
+<div className='text-center' style={{textAlign:"center"}}>   
+  
+           <h2>Frequently Asked  <b>Questions</b></h2>
+           </div>
+      {Questions.map((question, index) => (
+        <div key={index} className=" mb-3">
+          <div
+            className="card-header  align-items-center"
+            onClick={() => handleAccordionClick(index)}
+            style={{ cursor: 'pointer' }}
+          >
+
+            <div className='d-flex  justify-content-between '>
+
+
+            <div className="d-flex align-items-center">
+              <div className="rounded-circle me-3" style={{ width: '20px', height: '20px' ,backgroundColor:"#448b76"}}></div>
+              <h5 className="mb-0">{question.question}</h5>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className={`transition-transform ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
+              style={{ width: '16px', height: '16px' }}
+            >
+              {openIndex === index ? (
+                <path d="M18 15L12 9L6 15" />
+              ) : (
+                <path d="M6 9L12 15L18 9" />
+              )}
+            </svg>
+
+
+            </div>
+<hr />
+
+
+          </div>
+          {openIndex === index && (
+            <div className="">
+              <p className="">{question.answer}</p>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
 };
+
 
 
 const testimonials = [
@@ -583,8 +448,8 @@ const testimonials = [
   {
     text: "Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.",
     imgSrc: "/examples/images/clients/4.jpg",
-    name: "Mary Saveley",
-    details: "Graphic Designer / MarsMedia",
+    name: "Anna Gora",
+    details: "Senior Developer / TechGiant",
     rating: 4
   },
   {
@@ -600,95 +465,130 @@ const testimonials = [
     name: "John Williams",
     details: "Web Designer / UniqueDesign",
     rating: 4
+  },
+  {
+    text: "Vestibulum quis quam ut magna consequat faucibu. Eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat faucibus quam.",
+    imgSrc: "/examples/images/clients/6.jpg",
+    name: "John Williams",
+    details: "Web Designer / UniqueDesign",
+    rating: 4
   }
 ];
 
-const Carousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
+const TestimonialCarousel = () => {
   return (
     <div className="container-lg">
       <div className="row">
-        <div className="col-sm-12">
-          <div id="myCarousel" className="carousel">
-            <h2>Customer <b>Testimonials</b></h2>
-            <ol className="carousel-indicators">
+        <div className="col-sm-12">			
+          <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <div><h2 style={{textAlign:"center"}}>Customer <b>Testimonials</b></h2></div>  
+            {/* Carousel indicators */}
+            <br /><br />
+            <ol className="carousel-indicators" >
               {testimonials.map((_, index) => (
                 <li
                   key={index}
                   data-target="#myCarousel"
                   data-slide-to={index}
-                  className={index === currentIndex ? 'active' : ''}
+                  className={index === 0 ? 'active' : ''}
                 ></li>
               ))}
-            </ol>
+            </ol>   
+            {/* Wrapper for carousel items */}
             <div className="carousel-inner">
-              <div className="carousel-item active">
-                <div className="row">
-                  <div className="col-sm-6">
-                    <div className="testimonial">
-                      <p>{testimonials[currentIndex].text}</p>
-                    </div>
-                    <div className="media">
-                      <img
-                        src={testimonials[currentIndex].imgSrc}
-                        className="mr-3"
-                        alt=""
-                      />
-                      <div className="media-body">
-                        <div className="overview">
-                          <div className="name"><b>{testimonials[currentIndex].name}</b></div>
-                          <div className="details">{testimonials[currentIndex].details}</div>
-                          <div className="star-rating">
-                            <ul className="list-inline">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <li className="list-inline-item" key={i}>
-                                  <i className={`fa ${i < testimonials[currentIndex].rating ? 'fa-star' : 'fa-star-o'}`}></i>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                  <div className="row">
+                    <div className="col-sm-6">
+                      <div className="testimonial">
+                        <p>{testimonial.text}</p>
+                      </div>
+                      <div className="media">
+                        <img src={doctorImage} className="mr-3" alt="" />
+                        <div className="media-body">
+                          <div className="overview">
+                            <div className="name"><b>{testimonial.name}</b></div>
+                            <div className="details">{testimonial.details}</div>
+                            <div className="star-rating">
+                              <ul className="list-inline">
+                                {[...Array(testimonial.rating)].map((_, i) => (
+                                  <li key={i} className="list-inline-item"><i className="fa fa-star"></i></li>
+                                ))}
+                                {[...Array(5 - testimonial.rating)].map((_, i) => (
+                                  <li key={i} className="list-inline-item"><i className="fa fa-star-o"></i></li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>										
                         </div>
                       </div>
                     </div>
-                  </div>
+                    {index + 1 < testimonials.length && (
+                      <div className="col-sm-6">
+                        <div className="testimonial">
+                          <p>{testimonials[index + 1].text}</p>
+                        </div>
+                        <div className="media">
+                          <img src={doctorImage} className="mr-3" alt="" />
+                          {/* <img src={testimonials[index + 1].imgSrc} className="mr-3" alt="" /> */}
+                          <div className="media-body">
+                            <div className="overview">
+                              <div className="name"><b>{testimonials[index + 1].name}</b></div>
+                              <div className="details">{testimonials[index + 1].details}</div>
+                              <div className="star-rating">
+                                <ul className="list-inline">
+                                  {[...Array(testimonials[index + 1].rating)].map((_, i) => (
+                                    <li key={i} className="list-inline-item"><i className="fa fa-star"></i></li>
+                                  ))}
+                                  {[...Array(5 - testimonials[index + 1].rating)].map((_, i) => (
+                                    <li key={i} className="list-inline-item"><i className="fa fa-star-o"></i></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>										
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>			
                 </div>
-              </div>
+              ))}
             </div>
-            <a className="carousel-control-prev" onClick={handlePrevClick}>
-              <FaChevronLeft />
+            <br /><br />
+            {/* Carousel controls */}
+
+            {/* <div style={{backgroundColor:"red", color:"black"}}>
+            <a className="carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <i className="fa fa-chevron-left"></i>
             </a>
-            <a className="carousel-control-next" onClick={handleNextClick}>
-              <FaChevronRight />
+            <a className="carousel-control-next" href="#myCarousel" data-slide="next">
+              <i className="fa fa-chevron-right"></i>
             </a>
+            </div> */}
+          
           </div>
+          <br />
+
         </div>
       </div>
     </div>
   );
 };
+
+
+
+
   return (
     <div>
-      {/* <Navbar /> */}
-      {/* <Picture/> */}
-      {/* <StatsCard/> */}
-      {/* <DoctorList /> */}
-      <FAQSection/>
+      <Navbar />
+      <Picture/>
+      <StatsCard/>
+      <DoctorList />
+      <FAQ/>
       <TestimonialCarousel/>
-      <Carousel/>
-
+      <Footer/>
+      
+     
     </div>
   );
 }
