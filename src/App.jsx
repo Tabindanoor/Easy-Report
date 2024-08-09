@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Signup from './Signup'; 
 import './index.css';
 import PatientDashboard from './PatientDashboard';
+import DoctorDashboard from './DoctorDashboard';
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
       {/* Define the route for the signup page */}
       <Route path="/register" element={<Signup />} /> 
       <Route path="/dashboard" element={<PatientDashboard />} /> 
+      <Route path="/doctor" element={<DoctorDashboard />} /> 
     </Routes>
   );
 };
