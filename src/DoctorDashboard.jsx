@@ -1,11 +1,13 @@
 import React from 'react'
 import "./DoctorDashboard.css"
+import doctor from "../public/doctor.png";
+
 const DoctorDashboard = () => {
   return (
     <div>
         
-<div class="task-manager">
-  <div class="left-bar">
+<div class="task-manager" style={{backgroundColor:"skyblue"}}>
+  <div class="left-bar" style={{backgroundColor:"grey"}}>
     <div class="upper-part">
       <div class="actions">
         <div class="circle"></div>
@@ -22,35 +24,12 @@ const DoctorDashboard = () => {
             <path
               d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
           </svg>
+          <span> Saved</span>
+
         </li>
-        <li class="item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-inbox"
-            viewBox="0 0 24 24">
-            <path d="M22 12h-6l-2 3h-4l-2-3H2" />
-            <path
-              d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
-          </svg>
-        </li>
-        <li class="item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-inbox"
-            viewBox="0 0 24 24">
-            <path d="M22 12h-6l-2 3h-4l-2-3H2" />
-            <path
-              d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
-          </svg>
-        </li>
-        <li class="item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-star">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          <span> Today</span>
-          <span> Today</span>
-        </li>
+        
+        
+        
         <li class="item">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -137,7 +116,7 @@ const DoctorDashboard = () => {
       </ul>
     </div>
   </div>
-  <div class="page-content">
+  <div class="page-content" style={{backgroundColor:"pink"}}>
     <div class="header">Today Tasks</div>
     <div class="content-categories">
       <div class="label-wrapper">
@@ -231,7 +210,7 @@ const DoctorDashboard = () => {
       </div>
     </div>
   </div>
-  <div class="right-bar">
+  <div class="right-bar" style={{backgroundColor:"lime"}}>
     <div class="top-part">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -252,16 +231,16 @@ const DoctorDashboard = () => {
         <div class="more-button"></div>
         <div class="members">
           <img
-            src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+            src={doctor}
             alt="member"/>
           <img
-            src="https://images.unsplash.com/photo-1476657680631-c07285ff2581?ixlib=rb-1.2.1&auto=format&fit=crop&w=2210&q=80"
+            src={doctor}
             alt="member-2"/>
           <img
-            src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+            src={doctor}
             alt="member-3"/>
           <img
-            src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
+            src={doctor}
             alt="member-4"/>
         </div>
       </div>
@@ -272,14 +251,14 @@ const DoctorDashboard = () => {
         </div>
         <div class="more-button"></div>
         <div class="members">
-          <img
-            src="https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixlib=rb-1.2.1&auto=format&fit=crop&w=2230&q=80"
+        <img
+            src={doctor}
             alt="member"/>
           <img
-            src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+            src={doctor}
             alt="member-2"/>
           <img
-            src="https://images.unsplash.com/photo-1455504490126-80ed4d83b3b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
+            src={doctor}
             alt="member-3"/>
         </div>
       </div>
@@ -290,18 +269,20 @@ const DoctorDashboard = () => {
         </div>
         <div class="more-button"></div>
         <div class="members">
+        <img
+            src={doctor}
+            alt="member"/>
           <img
-            src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-            alt="member"/>   
-                <img
-            src="https://images.unsplash.com/photo-1475552113915-6fcb52652ba2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80"
+            src={doctor}
             alt="member-2"/>
           <img
-            src="https://images.unsplash.com/photo-1493752603190-08d8b5d1781d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80"
+            src={doctor}
             alt="member-3"/>
-          <img
-            src="https://images.unsplash.com/photo-1484688493527-670f98f9b195?ixlib=rb-1.2.1&auto=format&fit=crop&w=2230&q=80"
-            alt="member-4"/>
+            <img
+            src={doctor}
+            alt="member-3"/>
+
+
         </div>
       </div>
       <div class="task-box green">
