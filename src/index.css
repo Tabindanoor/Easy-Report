@@ -140,3 +140,14 @@ h3 {
 .welcome-box form {
     margin: 0; 
 }
+
+
+/* Optional: Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+.stat-card {
+  width: 100%;
+}
+    
