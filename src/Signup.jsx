@@ -24,7 +24,7 @@ const Signup = () => {
 
             <button type="submit">Register</button>
             <p style={{ textAlign: 'center', marginTop: '10px' }}>
-              Don't have an account? <a href="/login">Login</a>
+              Have an account? <a href="/">Login</a>
             </p> {}
           </form>
         </div>
